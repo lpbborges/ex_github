@@ -9,7 +9,7 @@ defmodule ExGithub.Github.Client do
   plug Tesla.Middleware.JSON
 
   def get_user_repos(url \\ @base_url, username) do
-    "#{url}#{username}/repos?per_page=2"
+    "#{url}#{username}/repos"
     |> get()
     |> handle_get()
   end
